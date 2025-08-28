@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.5/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         cacheDirectory=".phpunit.cache"
+         backupGlobals="false"
+         beStrictAboutTestsThatDoNotTestAnything="false"
+         beStrictAboutOutputDuringTests="false"
+         beStrictAboutTodoAnnotatedTests="false"
+         convertDeprecationsToExceptions="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         failOnRisky="false"
+         failOnWarning="false"
+         failOnEmptyTest="false"
+         verbose="true">
+    
+    <testsuites>
+        <testsuite name="AI Code Bot Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    
+    <coverage>
+        <include>
+            <directory suffix=".php">classes</directory>
+            <directory suffix=".php">.</directory>
+        </include>
+        <exclude>
+            <directory>vendor</directory>
+            <directory>tests</directory>
+            <directory>logs</directory>
+            <directory>cache</directory>
+            <directory>uploads</directory>
+        </exclude>
+        <report>
+            <html outputDirectory="coverage/html"/>
+            <clover outputFile="coverage/clover.xml"/>
+        </report>
+    </coverage>
+    
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="DB_DATABASE" value="ai_code_bot_test"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+    </php>
+</phpunit> 

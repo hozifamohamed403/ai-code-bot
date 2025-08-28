@@ -1,0 +1,58 @@
+{
+  "name": "aicodebot/ai-code-bot",
+  "description": "AI Code Bot - أقوى بوت برمجة في العالم",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "AI Code Bot",
+      "email": "admin@aicodebot.com",
+      "homepage": "https://aicodebot.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "ext-pdo": "*",
+    "ext-pdo_mysql": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "phpstan/phpstan": "^1.0",
+    "squizlabs/php_codesniffer": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AICodeBot\\": "classes/"
+    },
+    "files": [
+      "config.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AICodeBot\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-html coverage",
+    "stan": "phpstan analyse",
+    "cs": "phpcs",
+    "cs-fix": "phpcbf",
+    "post-install-cmd": [
+      "php install.php"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+} 

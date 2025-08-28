@@ -1,0 +1,47 @@
+{
+  "name": "ai-code-bot",
+  "version": "1.0.0",
+  "description": "AI Code Bot - أقوى بوت برمجة في العالم",
+  "main": "index.php",
+  "scripts": {
+    "start": "php -S localhost:8000",
+    "install": "php install.php",
+    "test": "php -l *.php",
+    "build": "echo 'Building AI Code Bot...'",
+    "deploy": "echo 'Deploying to production...'"
+  },
+  "keywords": [
+    "ai",
+    "bot",
+    "programming",
+    "code",
+    "php",
+    "mysql",
+    "chatbot",
+    "artificial-intelligence",
+    "web-development",
+    "database",
+    "api"
+  ],
+  "author": "AI Code Bot",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aicodebot/ai-code-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aicodebot/ai-code-bot/issues"
+  },
+  "homepage": "https://aicodebot.com",
+  "engines": {
+    "php": ">=7.4.0",
+    "mysql": ">=5.7.0"
+  },
+  "dependencies": {
+    "php": ">=7.4.0"
+  },
+  "devDependencies": {},
+  "config": {
+    "optimize-autoloader": true
+  }
+} 
